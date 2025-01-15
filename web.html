@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adan's Clothing</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('path/to/adans-clothing-logo.png') no-repeat center center fixed;
+            background-size: contain;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .search-bar {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 60%;
+            display: flex;
+            align-items: center;
+            background-color: white;
+            border-radius: 25px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 5px 15px;
+        }
+
+            .search-bar input {
+                width: 100%;
+                border: none;
+                outline: none;
+                font-size: 16px;
+                padding: 10px;
+                border-radius: 25px;
+            }
+
+            .search-bar button {
+                background-color: #ffd9a8;
+                border: none;
+                padding: 10px 20px;
+                cursor: pointer;
+                border-radius: 25px;
+                color: white;
+                font-weight: bold;
+                transition: background-color 0.3s;
+            }
+
+                .search-bar button:hover {
+                    background-color: #e6c190;
+                }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+            nav ul li {
+                display: inline;
+                margin-right: 10px;
+            }
+
+                nav ul li a {
+                    color: white;
+                    text-decoration: none;
+                    font-weight: bold;
+                }
+
+        #refresh {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        main {
+            padding: 1rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .product-box {
+            border: 2px solid #ffd9a8; /* Soft gold border */
+            background-color: #fff5eb; /* Light cream background */
+            padding: 1rem;
+            text-align: center;
+            border-radius: 15px; /* Slightly rounded corners */
+            transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+            font-weight: bold;
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            gap: 10px;
+        }
+
+            .product-box:hover {
+                transform: scale(1.05);
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                background-color: #ffe8cc; /* Slightly darker cream on hover */
+            }
+
+            .product-box img {
+                width: 100%;
+                border-radius: 10px; /* Rounded corners for images */
+            }
+
+            .product-box button {
+                background-color: #ffd9a8; /* Soft gold button */
+                color: white;
+                border: none;
+                padding: 10px 20px;
+                cursor: pointer;
+                border-radius: 10px; /* Rounded corners for buttons */
+                transition: background-color 0.3s;
+            }
+
+                .product-box button:hover {
+                    background-color: #e6c190; /* Slightly darker gold on hover */
+                }
+
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background-color: #333;
+            color: white;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Adan's Clothing</h1>
+        <div class="search-bar">
+            <input type="text" id="search" placeholder="Search for products, categories, or brands...">
+            <button onclick="searchProducts()">Search</button>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#cart">Cart</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <button id="refresh" onclick="location.reload();">Refresh</button>
+    </header>
+
+    <main>
+        <!-- Product Boxes -->
+        <div class="product-box" id="product-1">
+            <!-- Replace 'path/to/image1.jpg' with the actual image URL -->
+            <img src="c:\Users\alami\OneDrive\Pictures\Screenshots 1\460909256_122136476288327321_8434323521039549510_n.jpg" alt="Product Image 1">
+            <h2>Product 1</h2>
+            <p>Price: $abdullahr nani </p>
+            <button onclick="window.location.href='#cart';">Buy Now</button>
+            <button onclick="window.location.href='#details-1';">Details</button>
+        </div>
+        <div class="product-box" id="product-2">
+            <!-- Replace 'path/to/image2.jpg' with the actual image URL -->
+            <img src="c:\Users\alami\OneDrive\Pictures\Screenshots 1\mmxwwrspv7r71.jpg" alt="Product Image 2">
+            <h2>Product 2</h2>
+            <p>Price: $XX.XX</p>
+            <button onclick="window.location.href='#cart';">Buy Now</button>
+            <button onclick="window.location.href='#details-2';">Details</button>
+        </div>
+        <div class="product-box" id="product-3">
+            <!-- Replace 'path/to/image3.jpg' with the actual image URL -->
+            <img src="c:\Users\alami\OneDrive\Pictures\Screenshots 1\Screenshot 2024-12-23 231122.png" alt="Product Image 3">
+            <h2>Product 3</h2>
+            <p>Price: $XX.XX</p>
+            <button onclick="window.location.href='#cart';">Buy Now</button>
+            <button onclick="window.location.href='#details-3';">Details</button>
+        </div>
+        <div class="product-box" id="product-4">
+            <!-- Replace 'path/to/image4.jpg' with the actual image URL -->
+            <img src="c:\Users\alami\OneDrive\Pictures\Screenshots 1\Screenshot 2024-11-04 233459.png" alt="Product Image 4">
+            <h2>HIJRA ABDULLAH</h2>
+            <p>Price: $FREE </p>
+            <button onclick="window.location.href='#cart';">Buy Now</button>
+            <button onclick="window.location.href='#details-4';">Details</button>
+        </div>
+        <div class="product-box" id="product-5">
+            <!-- Replace 'path/to/image5.jpg' with the actual image URL -->
+            <img src="c:\Users\alami\Downloads\istockphoto-1403866295-612x612.jpg" alt="Product Image 5">
+            <h2>abdullahr bichi with 50%FAT </h2>
+            <p>Price: $69000</p>
+            <button onclick="window.location.href='#cart';">Buy Now</button>
+            <button onclick="window.location.href='#details-5';">Details</button>
+        </div>
+    </main>
+
+    <section id="cart" style="padding: 1rem;">
+        <h2>Your Cart</h2>
+        <div id="cart-items">
+            <!-- Cart items will be dynamically added here -->
+        </div>
+        <button onclick="window.location.href='https://www.facebook.com/61564322244454';">Checkout</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Adan's Clothing. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function searchProducts() {
+            const searchInput = document.getElementById('search').value.toLowerCase();
+            const products = document.querySelectorAll('.product-box');
+
+            products.forEach(product => {
+                const productName = product.querySelector('h2').textContent.toLowerCase();
+                if (productName.includes(searchInput)) {
+                    product.style.display = 'block';
+                } else {
+                    product.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
